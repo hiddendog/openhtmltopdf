@@ -6,15 +6,15 @@
   <parent>
     <groupId>com.openhtmltopdf</groupId>
     <artifactId>openhtmltopdf-parent</artifactId>
-    <version>0.0.1-RC4-JustifyFix</version>
+    <version>0.0.1-RC4-justify-fix</version>
   </parent>
 
-  <artifactId>openhtmltopdf-rtl-support</artifactId>
+  <artifactId>openhtmltopdf-svg-support</artifactId>
 
   <packaging>jar</packaging>
 
-  <name>Openhtmltopdf RTL Support</name>
-  <description>Open HTML to PDF is a CSS 2.1 renderer written in Java.  This artifact supports right-to-left text mixed with left-to-right text.</description>
+  <name>Openhtmltopdf SVG Support</name>
+  <description>Open HTML to PDF is a CSS 2.1 renderer written in Java.  This artifact supports drawing SVG graphics on to PDFs using Apache Batik.</description>
 
   <licenses>
     <license>
@@ -32,14 +32,19 @@
 
   <dependencies>
     <dependency>
-	<groupId>com.ibm.icu</groupId>
-	<artifactId>icu4j</artifactId>
-	<version>56.1</version>
-   </dependency>
-    <dependency>
         <groupId>com.openhtmltopdf</groupId>
         <artifactId>openhtmltopdf-core</artifactId>
         <version>${project.version}</version>
+    </dependency>
+    <dependency>
+	<groupId>org.apache.xmlgraphics</groupId>
+	<artifactId>batik-transcoder</artifactId>
+	<version>1.8</version>
+    </dependency>
+    <dependency>
+	<groupId>org.apache.xmlgraphics</groupId>
+	<artifactId>xmlgraphics-commons</artifactId>
+	<version>2.1</version>
     </dependency>
   </dependencies>
 

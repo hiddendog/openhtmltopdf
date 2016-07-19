@@ -6,15 +6,11 @@
   <parent>
     <groupId>com.openhtmltopdf</groupId>
     <artifactId>openhtmltopdf-parent</artifactId>
-    <version>0.0.1-RC4-JustifyFix</version>
+    <version>0.0.1-RC4-justify-fix</version>
   </parent>
 
-  <artifactId>openhtmltopdf-rtl-support</artifactId>
-
-  <packaging>jar</packaging>
-
-  <name>Openhtmltopdf RTL Support</name>
-  <description>Open HTML to PDF is a CSS 2.1 renderer written in Java.  This artifact supports right-to-left text mixed with left-to-right text.</description>
+  <artifactId>openhtmltopdf-core</artifactId>
+  <description>Open HTML to PDF is a CSS 2.1 renderer written in Java.  This artifact contains the core rendering and layout code as well as Java2D output.</description>
 
   <licenses>
     <license>
@@ -30,28 +26,30 @@
     </repository>
   </distributionManagement>
 
+  <packaging>jar</packaging>
+
+  <name>Openhtmltopdf Core Renderer</name>
   <dependencies>
     <dependency>
-	<groupId>com.ibm.icu</groupId>
-	<artifactId>icu4j</artifactId>
-	<version>56.1</version>
-   </dependency>
-    <dependency>
-        <groupId>com.openhtmltopdf</groupId>
-        <artifactId>openhtmltopdf-core</artifactId>
-        <version>${project.version}</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
   <build>
-	  <resources>
-	    <resource>
-	      <directory>../</directory>
-	      <targetPath>${project.build.outputDirectory}/META-INF</targetPath>
-	      <includes>
-	        <include>LICENSE*</include>
-	      </includes>
-	    </resource>
-	  </resources>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>../</directory>
+        <targetPath>${project.build.outputDirectory}/META-INF</targetPath>
+        <includes>
+          <include>LICENSE*</include>
+        </includes>
+      </resource>
+    </resources>
   </build>
 </project>

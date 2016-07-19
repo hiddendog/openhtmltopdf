@@ -6,15 +6,15 @@
   <parent>
     <groupId>com.openhtmltopdf</groupId>
     <artifactId>openhtmltopdf-parent</artifactId>
-    <version>0.0.1-RC4-JustifyFix</version>
+    <version>0.0.1-RC4-justify-fix</version>
   </parent>
 
-  <artifactId>openhtmltopdf-rtl-support</artifactId>
+  <artifactId>openhtmltopdf-jsoup-dom-converter</artifactId>
 
   <packaging>jar</packaging>
 
-  <name>Openhtmltopdf RTL Support</name>
-  <description>Open HTML to PDF is a CSS 2.1 renderer written in Java.  This artifact supports right-to-left text mixed with left-to-right text.</description>
+  <name>Openhtmltopdf Jsoup to DOM Converter</name>
+  <description>Open HTML to PDF is a CSS 2.1 renderer written in Java.  This artifact supports converting a Jsoup HTML5 instance into a DOM supported by Open HTML to PDF.</description>
 
   <licenses>
     <license>
@@ -32,14 +32,9 @@
 
   <dependencies>
     <dependency>
-	<groupId>com.ibm.icu</groupId>
-	<artifactId>icu4j</artifactId>
-	<version>56.1</version>
-   </dependency>
-    <dependency>
-        <groupId>com.openhtmltopdf</groupId>
-        <artifactId>openhtmltopdf-core</artifactId>
-        <version>${project.version}</version>
+	<groupId>org.jsoup</groupId>
+	<artifactId>jsoup</artifactId>
+	<version>1.8.3</version>
     </dependency>
   </dependencies>
 

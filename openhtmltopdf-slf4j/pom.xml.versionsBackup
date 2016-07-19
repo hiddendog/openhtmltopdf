@@ -6,15 +6,15 @@
   <parent>
     <groupId>com.openhtmltopdf</groupId>
     <artifactId>openhtmltopdf-parent</artifactId>
-    <version>0.0.1-RC4-JustifyFix</version>
+    <version>0.0.1-RC4-justify-fix</version>
   </parent>
 
-  <artifactId>openhtmltopdf-rtl-support</artifactId>
+  <artifactId>openhtmltopdf-slf4j</artifactId>
 
   <packaging>jar</packaging>
 
-  <name>Openhtmltopdf RTL Support</name>
-  <description>Open HTML to PDF is a CSS 2.1 renderer written in Java.  This artifact supports right-to-left text mixed with left-to-right text.</description>
+  <name>Openhtmltopdf slf4j Support</name>
+  <description>Open HTML to PDF is a CSS 2.1 renderer written in Java.  This artifact supports sending Open HTML to PDF log output to the slf4j logging facade.</description>
 
   <licenses>
     <license>
@@ -32,10 +32,10 @@
 
   <dependencies>
     <dependency>
-	<groupId>com.ibm.icu</groupId>
-	<artifactId>icu4j</artifactId>
-	<version>56.1</version>
-   </dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-api</artifactId>
+	<version>1.7.19</version>
+    </dependency>
     <dependency>
         <groupId>com.openhtmltopdf</groupId>
         <artifactId>openhtmltopdf-core</artifactId>
